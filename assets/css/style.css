@@ -84,7 +84,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a { 
@@ -118,9 +118,6 @@ header .wrapper {
   padding: 10px 0px;
 }
 
-
-
-
 /*=================================
   Header styling ends here
 =================================*/  
@@ -129,35 +126,67 @@ header .wrapper {
   main styling starts here
 =================================*/
 
+.counters{
+  margin: 20px;
+  background: #73C8A9;
+  background: -webkit-linear-gradient(to right, #373B44, #73C8A9); 
+  background: linear-gradient(to right, #373B44, #73C8A9);  
+  color: rgb(255, 255, 255,0.5);
+  padding: 100px 0;
+}
 
+.counters div:first-child ul{
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
 
+.counters li{
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
 
+.counters li span:first-child{
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
 
-
-
-
+.counters li span:last-child{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 768px) {
 
+  .counters li span:last-child {
+    font-size: 20px;
+  }
+  .counters li span:first-child{
+    font-size: 15px;
+  }
+}
 
-
-}  
+@media only screen and (max-width: 540px) {
+  .counters li{
+    flex-basis: 45%;
+    padding: 5% 0;
+  }
+}
